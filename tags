@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+<Leader>f	vimrc	/^nmap <Leader>f <Esc>gg=G``  $/;"	m
+<Leader>w	vimrc	/^nmap <Leader>w <Esc>:w<Enter>  $/;"	m
+ProfileSetting	README.md	/^# ProfileSetting$/;"	c
+df	vimrc	/^imap df <Esc>$/;"	m
+dfw	vimrc	/^imap dfw <Esc>:w<Enter>$/;"	m
+dfw	vimrc	/^map dfw :w<Enter>$/;"	m
+g:mapleader	vimrc	/^let g:mapleader=","$/;"	v
+mapleader	vimrc	/^let mapleader=","$/;"	v
+qq	vimrc	/^imap qq <Esc>:q!<Enter>$/;"	m
+qq	vimrc	/^map qq :q!<Enter>$/;"	m
+wq	vimrc	/^imap wq <Esc>:wq<Enter>$/;"	m
+wq	vimrc	/^map wq :wq<Enter>$/;"	m
