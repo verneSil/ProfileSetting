@@ -1,1 +1,2 @@
+source ~/.vimrc
 nmap <Leader>f gg=G

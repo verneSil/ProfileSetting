@@ -46,21 +46,21 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'tpope/vim-projectionist'
 Plug 'airblade/vim-rooter'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'morhetz/gruvbox'
 " Initialize plugin system
 call plug#end()
 
 "_____________mapping_______________________
 set number norelativenumber
 set nu rnu
-imap df <Esc>
-imap dfw <Esc>:w<Enter>
-imap wq <Esc>:wq<Enter>
+imap sd <Esc>
 imap qq <Esc>:q!<Enter>
-map dfw :w<Enter>
-map wq :wq<Enter>
 map qq :q!<Enter>
 nmap <Leader>f <Esc>gg=G``  
 nmap <Leader>w <Esc>:w<Enter>  
+nmap <Leader>wq <Esc>:wq<Enter>
+nmap <Leader>fzf <Esc>:FZF<Enter>
 "_____________end____________________________
 "
 "_____________vim-easy-align_________________
@@ -72,7 +72,7 @@ nmap ga <Plug>(EasyAlign)
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-map <C-n> :NERDTreeToggle<CR>
+map <C-e> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -215,11 +215,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " wrap existing omnifunc
 " Note that omnifunc does not run in background and may probably block the
-" editor. If you don't want to be blocked by omnifunc too often, you could
-" add 180ms delay before the omni wrapper:
-"  'on_complete': ['ncm2#on_complete#delay', 180,
-"               \ 'ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
-"au User Ncm2Plugin call ncm2#register_source({
+" editor. If you don't want to be blocked by om
+"call plug#begin('~/.vim/plugged')
+"source({
 "			\ 'name' : 'css',
 "			\ 'priority': 9,
 "			\ 'subscope_enable': 1,
@@ -240,8 +238,14 @@ let g:rooter_patterns = ['Rakefile', '.git/']
 let g:rooter_use_lcd = 1
 let g:rooter_silent_chdir = 1
 let g:rooter_resolve_links = 1
+"______________________vim-router_end__________________________________
 
-
+"______________________theme____________________________
+syntax on
+syntax enable
+set t_Co=256
+colorscheme gruvbox
+set background=dark
 
 
 
