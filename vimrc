@@ -48,8 +48,6 @@ Plug 'tpope/vim-projectionist'
 Plug 'airblade/vim-rooter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'morhetz/gruvbox'
-<<<<<<< Updated upstream
-=======
 Plug 'frazrepo/vim-rainbow'
 Plug 'Yggdroot/LeaderF'
 Plug 'ianva/vim-youdao-translater'
@@ -57,7 +55,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'kdheepak/lazygit.vim'
 Plug 'majutsushi/tagbar'
->>>>>>> Stashed changes
 " Initialize plugin system
 call plug#end()
 
@@ -256,41 +253,6 @@ syntax enable
 set t_Co=256
 colorscheme gruvbox
 set background=dark
-<<<<<<< Updated upstream
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 "______________________theme-end________________________
 
 "______________________vim-raimbow______________________
@@ -361,4 +323,3 @@ nnoremap <silent> <leader>lg :LazyGit<CR>
 "_________________________tagbar___________________________
 nmap <F8> :TagbarToggle<CR>
 "_________________________tagbar-end_______________________
->>>>>>> Stashed changes

@@ -6,10 +6,15 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
-<C-n>	vimrc	/^map <C-n> :NERDTreeToggle<CR>$/;"	m
+<C-B>	vimrc	/^noremap <C-B> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR>$/;"	m
+<C-F>	vimrc	/^noremap <C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>$/;"	m
+<C-T>	vimrc	/^nnoremap <silent> <C-T> :<C-u>Ydc<CR>$/;"	m
+<C-T>	vimrc	/^vnoremap <silent> <C-T> :<C-u>Ydv<CR>$/;"	m
+<C-e>	vimrc	/^map <C-e> :NERDTreeToggle<CR>$/;"	m
 <C-p>	vimrc	/^nmap <C-p> <Plug>MarkdownPreviewToggle$/;"	m
 <C-s>	vimrc	/^nmap <C-s> <Plug>MarkdownPreview$/;"	m
 <CR>	vimrc	/^inoremap <expr> <CR> (pumvisible() ? "\\<c-y>\\<cr>" : "\\<CR>")$/;"	m
+<F8>	vimrc	/^nmap <F8> :TagbarToggle<CR>$/;"	m
 <Leader>f	vimrc	/^nmap <Leader>f <Esc>gg=G``  $/;"	m
 <Leader>fzf	vimrc	/^nmap <Leader>fzf <Esc>:FZF<Enter>$/;"	m
 <Leader>w	vimrc	/^nmap <Leader>w <Esc>:w<Enter>  $/;"	m
@@ -18,7 +23,32 @@
 <S-Tab>	vimrc	/^inoremap <expr> <S-Tab> pumvisible() ? "\\<C-p>" : "\\<S-Tab>"$/;"	m
 <Tab>	vimrc	/^inoremap <expr> <Tab> pumvisible() ? "\\<C-n>" : "\\<Tab>"$/;"	m
 <c-c>	vimrc	/^inoremap <c-c> <ESC>$/;"	m
+<leader>fb	vimrc	/^noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>$/;"	m
+<leader>fd	vimrc	/^noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR>/;"	m
+<leader>fl	vimrc	/^noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>$/;"	m
+<leader>fm	vimrc	/^noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>$/;"	m
+<leader>fn	vimrc	/^noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>$/;"	m
+<leader>fo	vimrc	/^noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>$/;"	m
+<leader>fp	vimrc	/^noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>$/;"	m
+<leader>fr	vimrc	/^noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR>/;"	m
+<leader>ft	vimrc	/^noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>$/;"	m
+<leader>lg	vimrc	/^nnoremap <silent> <leader>lg :LazyGit<CR>$/;"	m
+<leader>yd	vimrc	/^noremap <leader>yd :<C-u>Yde<CR>$/;"	m
 ProfileSetting	README.md	/^# ProfileSetting$/;"	c
+g:Lf_DevIconsFont	vimrc	/^let g:Lf_DevIconsFont = "DejaVuSansMono Nerd Font Mono"$/;"	v
+g:Lf_GtagsAutoGenerate	vimrc	/^let g:Lf_GtagsAutoGenerate = 0$/;"	v
+g:Lf_Gtagslabel	vimrc	/^let g:Lf_Gtagslabel = 'native-pygments'$/;"	v
+g:Lf_HideHelp	vimrc	/^let g:Lf_HideHelp = 1$/;"	v
+g:Lf_IgnoreCurrentBufferName	vimrc	/^let g:Lf_IgnoreCurrentBufferName = 1$/;"	v
+g:Lf_PreviewInPopup	vimrc	/^let g:Lf_PreviewInPopup = 1$/;"	v
+g:Lf_PreviewResult	vimrc	/^let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }$/;"	v
+g:Lf_ShortcutF	vimrc	/^let g:Lf_ShortcutF = "<leader>ff"$/;"	v
+g:Lf_ShortcutF	vimrc	/^let g:Lf_ShortcutF = '<C-P>'$/;"	v
+g:Lf_ShowDevIcons	vimrc	/^let g:Lf_ShowDevIcons = 1$/;"	v
+g:Lf_StlSeparator	vimrc	/^let g:Lf_StlSeparator = { 'left': "\\ue0b0", 'right': "\\ue0b2", 'font': "DejaVu Sans Mono for P/;"	v
+g:Lf_UseCache	vimrc	/^let g:Lf_UseCache = 0$/;"	v
+g:Lf_UseVersionControlTool	vimrc	/^let g:Lf_UseVersionControlTool = 0$/;"	v
+g:Lf_WindowPosition	vimrc	/^let g:Lf_WindowPosition = 'popup'$/;"	v
 g:NERDTreeDirArrowCollapsible	vimrc	/^let g:NERDTreeDirArrowCollapsible = '▾'$/;"	v
 g:NERDTreeDirArrowExpandable	vimrc	/^let g:NERDTreeDirArrowExpandable = '▸'$/;"	v
 g:airline#extensions#tabline#enabled	vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
@@ -31,6 +61,8 @@ g:ctrlp_custom_ignore	vimrc	/^let g:ctrlp_custom_ignore = {$/;"	v
 g:ctrlp_map	vimrc	/^let g:ctrlp_map = '<c-p>'$/;"	v
 g:ctrlp_user_command	vimrc	/^let g:ctrlp_user_command = 'find %s -type f'$/;"	v
 g:ctrlp_working_path_mode	vimrc	/^let g:ctrlp_working_path_mode = 'ra'$/;"	v
+g:lazygit_floating_window_scaling_factor	vimrc	/^let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window$/;"	v
+g:lazygit_floating_window_winblend	vimrc	/^let g:lazygit_floating_window_winblend = 0 " transparency of floating window$/;"	v
 g:mapleader	vimrc	/^let g:mapleader=","$/;"	v
 g:mkdp_auto_close	vimrc	/^let g:mkdp_auto_close = 1$/;"	v
 g:mkdp_auto_start	vimrc	/^let g:mkdp_auto_start = 0$/;"	v
@@ -46,6 +78,10 @@ g:mkdp_page_title	vimrc	/^let g:mkdp_page_title = '「${name}」'$/;"	v
 g:mkdp_port	vimrc	/^let g:mkdp_port = ''$/;"	v
 g:mkdp_preview_options	vimrc	/^let g:mkdp_preview_options = {$/;"	v
 g:mkdp_refresh_slow	vimrc	/^let g:mkdp_refresh_slow = 0$/;"	v
+g:rainbow_active	vimrc	/^let g:rainbow_active = 1$/;"	v
+g:rainbow_ctermfgs	vimrc	/^let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']$/;"	v
+g:rainbow_guifgs	vimrc	/^let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']$/;"	v
+g:rainbow_load_separately	vimrc	/^let g:rainbow_load_separately = [$/;"	v
 g:rooter_change_directory_for_non_project_files	vimrc	/^let g:rooter_change_directory_for_non_project_files = 'current'$/;"	v
 g:rooter_manual_only	vimrc	/^let g:rooter_manual_only = 1$/;"	v
 g:rooter_patterns	vimrc	/^let g:rooter_patterns = ['Rakefile', '.git\/']$/;"	v
@@ -55,6 +91,8 @@ g:rooter_targets	vimrc	/^let g:rooter_targets = '\/,*.yml,*.yaml'$/;"	v
 g:rooter_use_lcd	vimrc	/^let g:rooter_use_lcd = 1$/;"	v
 ga	vimrc	/^nmap ga <Plug>(EasyAlign)$/;"	m
 ga	vimrc	/^xmap ga <Plug>(EasyAlign)$/;"	m
+gf	vimrc	/^xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>$/;"	m
+go	vimrc	/^noremap go :<C-U>Leaderf! rg --recall<CR>$/;"	m
 mapleader	vimrc	/^let mapleader=","$/;"	v
 qq	vimrc	/^imap qq <Esc>:q!<Enter>$/;"	m
 qq	vimrc	/^map qq :q!<Enter>$/;"	m
