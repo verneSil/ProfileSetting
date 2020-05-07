@@ -48,6 +48,16 @@ Plug 'tpope/vim-projectionist'
 Plug 'airblade/vim-rooter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'morhetz/gruvbox'
+<<<<<<< Updated upstream
+=======
+Plug 'frazrepo/vim-rainbow'
+Plug 'Yggdroot/LeaderF'
+Plug 'ianva/vim-youdao-translater'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'kdheepak/lazygit.vim'
+Plug 'majutsushi/tagbar'
+>>>>>>> Stashed changes
 " Initialize plugin system
 call plug#end()
 
@@ -246,6 +256,7 @@ syntax enable
 set t_Co=256
 colorscheme gruvbox
 set background=dark
+<<<<<<< Updated upstream
 
 
 
@@ -279,3 +290,75 @@ set background=dark
 
 
 
+=======
+"______________________theme-end________________________
+
+"______________________vim-raimbow______________________
+let g:rainbow_active = 1
+let g:rainbow_load_separately = [
+			\ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+			\ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+			\ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+			\ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+			\ ]
+
+let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+"_______________________vim-rainbow-end__________________
+"_______________________leaderF_________________________
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_ShortcutF = '<C-P>'
+" Show icons, icons are shown by default
+let g:Lf_ShowDevIcons = 1
+" For GUI vim, the icon font can be specify like this, for example
+let g:Lf_DevIconsFont = "DejaVuSansMono Nerd Font Mono"
+" If needs
+set ambiwidth=double
+
+" don't show the help in normal mode
+let g:Lf_HideHelp = 1
+let g:Lf_UseCache = 0
+let g:Lf_UseVersionControlTool = 0
+let g:Lf_IgnoreCurrentBufferName = 1
+" popup mode
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
+
+let g:Lf_ShortcutF = "<leader>ff"
+noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+
+noremap <C-B> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR>
+noremap <C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
+" search visually selected text literally
+xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>
+noremap go :<C-U>Leaderf! rg --recall<CR>
+
+" should use `Leaderf gtags --update` first
+let g:Lf_GtagsAutoGenerate = 0
+let g:Lf_Gtagslabel = 'native-pygments'
+noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
+noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
+noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
+"_______________________leaderF-end______________________
+"_______________________vim-youdao-translater____________
+vnoremap <silent> <C-T> :<C-u>Ydv<CR>
+nnoremap <silent> <C-T> :<C-u>Ydc<CR>
+noremap <leader>yd :<C-u>Yde<CR>
+"________________________vim-youdao-translater-end__________
+"________________________lazygit________________________
+let g:lazygit_floating_window_winblend = 0 " transparency of floating window
+let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
+nnoremap <silent> <leader>lg :LazyGit<CR>
+"_________________________lazygit-end__________________
+"_________________________tagbar___________________________
+nmap <F8> :TagbarToggle<CR>
+"_________________________tagbar-end_______________________
+>>>>>>> Stashed changes
