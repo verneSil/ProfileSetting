@@ -55,6 +55,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'kdheepak/lazygit.vim'
 Plug 'majutsushi/tagbar'
+Plug 'dhruvasagar/vim-table-mode'
 " Initialize plugin system
 call plug#end()
 
@@ -240,11 +241,10 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "_______________________vim-rooter_____________________________________
 let g:rooter_change_directory_for_non_project_files = 'current'
 let g:rooter_targets = '/,*.yml,*.yaml'
-let g:rooter_manual_only = 1
 let g:rooter_patterns = ['Rakefile', '.git/']
-let g:rooter_use_lcd = 1
-let g:rooter_silent_chdir = 1
-let g:rooter_resolve_links = 1
+"let g:rooter_use_lcd = 1
+"let g:rooter_silent_chdir = 1
+"let g:rooter_resolve_links = 1
 "______________________vim-router_end__________________________________
 
 "______________________theme____________________________
@@ -323,3 +323,6 @@ nnoremap <silent> <leader>lg :LazyGit<CR>
 "_________________________tagbar___________________________
 nmap <F8> :TagbarToggle<CR>
 "_________________________tagbar-end_______________________
+"_________________________vim-table-mode__________________
+
+"__________________________vim-table-mode_________________

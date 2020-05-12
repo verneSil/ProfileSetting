@@ -84,7 +84,6 @@ plugins=(
 	branch
 	colorize
 	dirhistory
-	systemd
 	history
 	history-substring-search
 	per-directory-history

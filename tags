@@ -83,12 +83,8 @@ g:rainbow_ctermfgs	vimrc	/^let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 
 g:rainbow_guifgs	vimrc	/^let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']$/;"	v
 g:rainbow_load_separately	vimrc	/^let g:rainbow_load_separately = [$/;"	v
 g:rooter_change_directory_for_non_project_files	vimrc	/^let g:rooter_change_directory_for_non_project_files = 'current'$/;"	v
-g:rooter_manual_only	vimrc	/^let g:rooter_manual_only = 1$/;"	v
 g:rooter_patterns	vimrc	/^let g:rooter_patterns = ['Rakefile', '.git\/']$/;"	v
-g:rooter_resolve_links	vimrc	/^let g:rooter_resolve_links = 1$/;"	v
-g:rooter_silent_chdir	vimrc	/^let g:rooter_silent_chdir = 1$/;"	v
 g:rooter_targets	vimrc	/^let g:rooter_targets = '\/,*.yml,*.yaml'$/;"	v
-g:rooter_use_lcd	vimrc	/^let g:rooter_use_lcd = 1$/;"	v
 ga	vimrc	/^nmap ga <Plug>(EasyAlign)$/;"	m
 ga	vimrc	/^xmap ga <Plug>(EasyAlign)$/;"	m
 gf	vimrc	/^xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>$/;"	m
@@ -97,3 +93,4 @@ mapleader	vimrc	/^let mapleader=","$/;"	v
 qq	vimrc	/^imap qq <Esc>:q!<Enter>$/;"	m
 qq	vimrc	/^map qq :q!<Enter>$/;"	m
 sd	vimrc	/^imap sd <Esc>$/;"	m
+token	Intelij-keymap.md	/^# token$/;"	c
