@@ -35,6 +35,7 @@
 <leader>lg	vimrc	/^nnoremap <silent> <leader>lg :LazyGit<CR>$/;"	m
 <leader>yd	vimrc	/^noremap <leader>yd :<C-u>Yde<CR>$/;"	m
 ProfileSetting	README.md	/^# ProfileSetting$/;"	c
+callInitShell	shell/inital.sh	/^callInitShell(){$/;"	f
 g:Lf_DevIconsFont	vimrc	/^let g:Lf_DevIconsFont = "DejaVuSansMono Nerd Font Mono"$/;"	v
 g:Lf_GtagsAutoGenerate	vimrc	/^let g:Lf_GtagsAutoGenerate = 0$/;"	v
 g:Lf_Gtagslabel	vimrc	/^let g:Lf_Gtagslabel = 'native-pygments'$/;"	v
@@ -94,3 +95,4 @@ qq	vimrc	/^imap qq <Esc>:q!<Enter>$/;"	m
 qq	vimrc	/^map qq :q!<Enter>$/;"	m
 sd	vimrc	/^imap sd <Esc>$/;"	m
 token	Intelij-keymap.md	/^# token$/;"	c
+快捷键切换	Intelij-keymap.md	/^# 快捷键切换$/;"	c
