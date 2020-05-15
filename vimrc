@@ -28,10 +28,8 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Plugin options
 "Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/vim-easy-align'
@@ -44,7 +42,6 @@ Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
-Plug 'tpope/vim-projectionist'
 Plug 'airblade/vim-rooter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'morhetz/gruvbox'
@@ -56,19 +53,26 @@ Plug 'tpope/vim-surround'
 Plug 'kdheepak/lazygit.vim'
 Plug 'majutsushi/tagbar'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'christoomey/vim-system-copy'
+Plug 'airblade/vim-gitgutter'
 " Initialize plugin system
 call plug#end()
 
 "_____________mapping_______________________
+set updatetime=100
+
 set number norelativenumber
 set nu rnu
 imap sd <Esc>
+nmap sd <Esc>
 imap qq <Esc>:q!<Enter>
 map qq :q!<Enter>
 nmap <Leader>f <Esc>gg=G``  
 nmap <Leader>w <Esc>:w<Enter>  
 nmap <Leader>wq <Esc>:wq<Enter>
 nmap <Leader>fzf <Esc>:FZF<Enter>
+nmap <Leader>jj <C-d>
+nmap <Leader>jk <C-u>
 "_____________end____________________________
 "
 "_____________vim-easy-align_________________
@@ -240,11 +244,10 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 "_______________________vim-rooter_____________________________________
 let g:rooter_change_directory_for_non_project_files = 'current'
-let g:rooter_targets = '/,*.yml,*.yaml'
 let g:rooter_patterns = ['Rakefile', '.git/']
-"let g:rooter_use_lcd = 1
-"let g:rooter_silent_chdir = 1
-"let g:rooter_resolve_links = 1
+let g:rooter_use_lcd = 1
+let g:rooter_silent_chdir = 1
+let g:rooter_resolve_links = 1
 "______________________vim-router_end__________________________________
 
 "______________________theme____________________________
@@ -326,3 +329,6 @@ nmap <F8> :TagbarToggle<CR>
 "_________________________vim-table-mode__________________
 
 "__________________________vim-table-mode_________________
+"__________________________ vim-system-copy_______________
+"
+"__________________________ vim-system-copy-end_______________

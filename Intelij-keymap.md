@@ -21,10 +21,16 @@
 | move caret <-     |                |              | ctrl+u       | add    |
 | move caret ->     |                |              | ctrl+o       | add    |
 | override method   | ctrl+o         |              |              | add    |
+| unshelf           | ctrl+shift+u   |              |              | delete |
+| toggle case       | ctrl+shift+u   |              |              | delete |
+| go back           | ctru+shift+U   |              |              | add    |
+| forward           | ctrl+shift+u+  |              |              | add    |
+| load changes      | ctrl+shift+u   |              |              | delete |
+| extend selection  |                |              |              | delete |
+| close(tabs)       | ctrl+w         |              |              | add    |
+| commit message    | ctrl+m         |              |              | delete |
+| file Structure    | ctrl+m         |              |              | add    |
 
-
-	
-	
 
 
 # token
