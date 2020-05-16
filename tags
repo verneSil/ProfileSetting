@@ -36,6 +36,7 @@
 <leader>ft	vimrc	/^noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>$/;"	m
 <leader>lg	vimrc	/^nnoremap <silent> <leader>lg :LazyGit<CR>$/;"	m
 <leader>yd	vimrc	/^noremap <leader>yd :<C-u>Yde<CR>$/;"	m
+B	vimrc	/^nmap B ^$/;"	m
 ProfileSetting	README.md	/^# ProfileSetting$/;"	c
 callInitShell	shell/inital.sh	/^callInitShell(){$/;"	f
 g:Lf_DevIconsFont	vimrc	/^let g:Lf_DevIconsFont = "DejaVuSansMono Nerd Font Mono"$/;"	v

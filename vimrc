@@ -60,7 +60,9 @@ call plug#end()
 
 "_____________mapping_______________________
 set updatetime=100
-
+set timeoutlen
+set timeoutlen=300
+set ttimeoutlen=0
 set number norelativenumber
 set nu rnu
 imap sd <Esc>
@@ -73,6 +75,7 @@ nmap <Leader>wq <Esc>:wq<Enter>
 nmap <Leader>fzf <Esc>:FZF<Enter>
 nmap <Leader>jj <C-d>
 nmap <Leader>jk <C-u>
+nmap B ^
 "_____________end____________________________
 "
 "_____________vim-easy-align_________________
@@ -304,7 +307,8 @@ noremap <C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
 xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>
 noremap go :<C-U>Leaderf! rg --recall<CR>
 
-" should use `Leaderf gtags --update` first
+
+" shoul, use `Leaderf gtags --update` first
 let g:Lf_GtagsAutoGenerate = 0
 let g:Lf_Gtagslabel = 'native-pygments'
 noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
