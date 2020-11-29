@@ -60,7 +60,6 @@ call plug#end()
 
 "_____________mapping_______________________
 set updatetime=100
-set timeoutlen
 set timeoutlen=300
 set ttimeoutlen=0
 set number norelativenumber
